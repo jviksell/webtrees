@@ -1,7 +1,7 @@
 <?php
 /**
  * webtrees: online genealogy
- * Copyright (C) 2016 webtrees development team
+ * Copyright (C) 2017 webtrees development team
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -14,6 +14,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 namespace Fisharebest\Webtrees;
+
+use stdClass;
 
 /**
  * Generate messages in one request and display them in the next.
@@ -29,7 +31,7 @@ class FlashMessages {
 	 * @param string $status "success", "info", "warning" or "danger"
 	 */
 	public static function addMessage($text, $status = 'info') {
-		$message         = new \stdClass;
+		$message         = new stdClass;
 		$message->text   = $text;
 		$message->status = $status;
 
@@ -41,7 +43,7 @@ class FlashMessages {
 	/**
 	 * Get the current messages, and remove them from session storage.
 	 *
-	 * @return string[]
+	 * @return stdClass[]
 	 */
 	public static function getMessages() {
 		$messages = Session::get(self::FLASH_KEY, []);
