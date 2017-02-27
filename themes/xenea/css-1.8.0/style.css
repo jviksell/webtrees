@@ -1749,16 +1749,6 @@ a:hover .nameZoom {
 }
 
 /* ======== List styles ====== */
-.source-list,
-.note-list,
-.repo-list,
-.media-list,
-.indi-list,
-.fam-list {
-	margin: 5px auto;
-	visibility: hidden;
-}
-
 .surname-list,
 .givn-list {
 	margin: 5px auto;
@@ -1856,13 +1846,6 @@ a:hover .nameZoom {
 
 .list-charts {
 	text-align: center;
-}
-
-#search-result-tabs,
-#places-tabs {
-	margin: auto;
-	width: 98%;
-	visibility: hidden;
 }
 
 #search-result-tabs h3 {

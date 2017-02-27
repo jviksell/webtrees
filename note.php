@@ -60,14 +60,7 @@ if ($controller->record && $controller->record->canShow()) {
 	return;
 }
 
-$controller->addInlineJavascript('
-	$("#note-tabs")
-		.tabs({
-			create: function(e, ui){
-				$(e.target).css("visibility", "visible");  // prevent FOUC
-			}
-		});
-');
+$controller->addInlineJavascript('$("#note-tabs").tabs();');
 
 $linked_fam  = $controller->record->linkedFamilies('NOTE');
 $linked_indi = $controller->record->linkedIndividuals('NOTE');

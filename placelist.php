@@ -182,10 +182,7 @@ case 'hierarchy':
 		echo '<br>';
 
 		//-- display results
-		$controller
-			->addInlineJavascript('$("#places-tabs").tabs();')
-			->addInlineJavascript('$("#places-tabs").css("visibility", "visible");')
-			->addInlineJavascript('$(".loading-image").css("display", "none");');
+		$controller->addInlineJavascript('$("#places-tabs").tabs();');
 
 		echo '<div class="loading-image"></div>';
 		echo '<div id="places-tabs"><ul>';

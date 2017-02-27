@@ -59,14 +59,7 @@ if ($controller->record && $controller->record->canShow()) {
 	return;
 }
 
-$controller->addInlineJavascript('
-	$("#media-tabs")
-		.tabs({
-			create: function(e, ui){
-				$(e.target).css("visibility", "visible");  // prevent FOUC
-			}
-		});
-');
+$controller->addInlineJavascript('$("#media-tabs").tabs();');
 
 $linked_fam  = $controller->record->linkedFamilies('OBJE');
 $linked_indi = $controller->record->linkedIndividuals('OBJE');

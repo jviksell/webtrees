@@ -1930,17 +1930,6 @@ background-color: #fff;
 	text-align: center;
 }
 
-#source-tabs,
-#note-tabs,
-#repo-tabs,
-#media-tabs {
-	visibility: hidden;
-}
-
-#statistics_chart {
-	visibility: hidden;
-}
-
 #source-edit,
 #note-edit,
 #repo-edit,
@@ -1972,13 +1961,6 @@ background-color: #fff;
 
 .list-charts {
 	text-align: center;
-}
-
-#search-result-tabs,
-#places-tabs {
-	margin: auto;
-	width: 98%;
-	visibility: hidden;
 }
 
 #search-result-tabs h3 {

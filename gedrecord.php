@@ -71,14 +71,7 @@ if ($controller->record && $controller->record->canShow()) {
 	return;
 }
 
-$controller->addInlineJavascript('
-	$("#record-tabs")
-		.tabs({
-			create: function(e, ui){
-				$(e.target).css("visibility", "visible");  // prevent FOUC
-			}
-		});
-');
+$controller->addInlineJavascript('$("#record-tabs").tabs();');
 
 $linked_indi = $controller->record->linkedIndividuals('SUBM');
 $linked_fam  = $controller->record->linkedFamilies('SUBM');

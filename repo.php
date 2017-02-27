@@ -59,14 +59,7 @@ if ($controller->record && $controller->record->canShow()) {
 	return;
 }
 
-$controller->addInlineJavascript('
-	$("#repo-tabs")
-		.tabs({
-			create: function(e, ui){
-				$(e.target).css("visibility", "visible");  // prevent FOUC
-			}
-		});
-');
+$controller->addInlineJavascript('$("#repo-tabs").tabs();');
 
 $linked_fam  = [];
 $linked_indi = [];
